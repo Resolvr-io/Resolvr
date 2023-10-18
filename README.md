@@ -38,14 +38,14 @@ But by using existing and interoperable protocols for communication and escrow, 
 
 Bounty adjudication will progress as follows.  
 
-1. Grantor posts a bounty to a bounty bulletin board on nostr, detailing the criteria for the project and specifying Resolvr as the escrow agent.
+1. Grantor posts a bounty to a bounty bulletin board on nostr, detailing the criteria for the project and specifying Resolvr as the escrow agent (and stating the number of requested Reviewers).
 
 2. Applicant Developer applies for the bounty.  Bounty is flagged "in-progress."  
 3. Applicant Developer and Grantor enter escrow contract specifying their payout addresses.  Grantor sends funds to multi-sig escrow address that requires Resolvr's key.  Applicant Developer sends nonrefundable application fee to escrow address.
 
 4. Applicant Developer completes the work and sends code and other supporting documentation or resources to Resolvr.  The bounty is flagged as "in-review."  (NOTE:  Grantor does not receive access to code at this point.)
 
-5. Resolvr's Review Panel Coordinator assigns the Applicant Developer's work-product and Grantor's criteria to a Review Panel of at least three developers, unrelated to either the Grantor or Applicant Developer.  
+5. Resolvr's Review Panel Coordinator assigns the Applicant Developer's work-product and Grantor's criteria to a Review Panel of at least three developers (the exact number stated in the original bounty), unrelated to either the Grantor or Applicant Developer.  
 
 6. Resolvr transmits the Review Panel's decision (with reasoning) to the parties to the escrow contract.  If the parties disagree with the decision of the Review Panel, they can initiate an appeal within a set amount of time before funds are released from escrow.
    
@@ -59,7 +59,7 @@ Bounty adjudication will progress as follows.
 
 ### 2.3. Review Panel Coordinator Process
 
-Resolvr's Review Panel Coordinator serves as the system's oracle.  Decisions are reached through crowdsourcing.  For each bounty application, the Coordinator selects a panel of three qualified, third-party neutral developers to serve as Reviewers.  Reviewers consider the bounty criteria and application asynchronously during a timed voting period.  In reaching their decision, the Reviewers cannot communicate with each other or the Grantor or Applicant Developer.  Each Reviewer's decision is based solely on the application material, guided by the Grantor's previously-posted criteria.   
+Resolvr's Review Panel Coordinator serves as the system's oracle.  Decisions are reached through crowdsourcing.  For each bounty application, the Coordinator selects a panel of qualified, third-party neutral developers to serve as Reviewers.  Reviewers consider the bounty criteria and application asynchronously during a timed voting period.  In reaching their decision, the Reviewers cannot communicate with each other or the Grantor or Applicant Developer.  Each Reviewer's decision is based solely on the application material, guided by the Grantor's previously-posted criteria.   
 
 Reviewers sign up for Resolvr with their nostr public keys, which are linked to their GitHub accounts.  Based on their GitHub experience, Reviewers are sorted into pools based on level of experience (novice, intermediate, advanced) and subject matter.  (Blinding could be applied to shield the contents of a Reviewer's GitHub history, while still communicating statistics useful for gauging developer experience, such as number of commits, merged pull requests, consistency/length of activity, etc.)
 
